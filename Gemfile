@@ -44,6 +44,8 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'sqlite3'
   gem 'listen'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'rails-controller-testing' 
 end
 
 group :production do
