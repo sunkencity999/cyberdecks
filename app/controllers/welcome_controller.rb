@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
   end
 
   def blog
+	  @posts = Post.all
   end
 
   def builds

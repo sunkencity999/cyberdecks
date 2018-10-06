@@ -1,2 +1,12 @@
-<h1>Welcome#blog</h1>
-<p>Find me in app/views/welcome/blog.html.erb</p>
+<h1>The Log</h1>
+
+<% @posts.each do |post| %>
+	<div class="media">
+		<div class="media-body">
+			<h4 class="media-heading">
+				<%= link_to post.title, post_path(post.id) %>
+			</h4>
+		</div>
+	</div>	
+<% end %>
+
