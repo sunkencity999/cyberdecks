@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe PostsController, type: :controller do
+RSpec.describe PostsController, :type => :controller do
 	let(:my_post) {Post.create!(title: "Test Title", body: "Test Body")}
 
   describe "GET #index" do
@@ -11,9 +11,9 @@ RSpec.describe PostsController, type: :controller do
   end
   	it "assigns [my_post] to @posts" do 
 		get :index
+
 		expect(assigns(:posts)).to eq([my_post])
 	end
-end
 	
 
  # describe "GET #show" do
@@ -42,7 +42,7 @@ end
 
   describe "POST create" do 
 	  it "increases the number of Post by 1" do
-		  expect{post :create, params: { post: {title: "Test Title", body: "Test Body"}}}.to change(Post, :count).by(1)
+		  expect{ post :create, params: { post: { title: "Test Title", body: "Test Body"}}}.to change(Post,:count).by(1)
 	  end
 
 	  it "Assigns the new post to @post" do
@@ -51,9 +51,9 @@ end
 	  end
 
 	  it "redirects to the new post" do 
-		  post :create, params: { post: { title: "Test Tile", body: "Test Body"}}
+		  post :create, params: { post: { title: "Test Title", body: "Test Body"}}
 		  expect(response).to redirect_to Post.last
 	  end
   end
-
+end
   
