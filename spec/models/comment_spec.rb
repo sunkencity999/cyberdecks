@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-	let(:post) {Post.create!(title:"new post title", body:"new body text")}
+	let(:topic) { Topic.create!(name: "TopicTestName", description: "TopicTestDescription")}
+	let(:post) {Topic.posts.create!(title:"new post title", body:"new body text")}
 	let(:comment) {Comment.create!(body:"comment body", post: post) }
 
 	describe "attributes" do
