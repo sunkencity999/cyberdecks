@@ -64,7 +64,7 @@ class TopicsController < ApplicationController
 		params.require(:topic).permit(:name, :description, :public)
 	end
 
-	def uathorize_user
+	def authorize_user
 		unless current_user.admin?
 			flash[:alert] = "You must be the Administrator to do that."
 			redirect_to topics_path

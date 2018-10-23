@@ -2,8 +2,14 @@ require 'rails_helper'
 
 RSpec.describe TopicsController, type: :controller do
 
-
+        let(:my_user) { User.create!(name: "Test User", email: "test@test.com", password: "password", role: 1)}
 	let(:my_topic) { Topic.create!(name: "TopicTestName", description: "TopicTestDescription")}
+
+	before do
+		my_user.admin!
+		create_session(my_user)
+	end
+
 
 	describe "GET index" do
 		it "returns http success" do

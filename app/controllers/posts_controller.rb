@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 	before_action :require_sign_in, except: :show
-	before_action :authorize_user, except: :show
+	before_action :authorize_user, except: [:new, :show, :create]
 
 #index not needed as posts are nested with topics	
 #  def index
