@@ -6,9 +6,6 @@ class WelcomeController < ApplicationController
 	  @posts = Post.all
   end
 
-  def builds
-  end
-
   def contact
   end
 end
