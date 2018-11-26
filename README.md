@@ -10,9 +10,9 @@ This web application is a blog with custom-built authorization, created primaril
 Cyberdecks is built with Ruby-on-Rails, and hosted on Heroku's cloud computing platform. 
 
 ###Ruby Version###
-
+2.5.1
 ###Rails Version###
-
+5.2.1
 ###CSS Framework###
 
 Bootstrap v4.1.3
